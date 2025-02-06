@@ -69,6 +69,15 @@ app.get("/api/classify-number", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch fun fact" });
   }
 });
+app.use((req, res) => {
+  const baseUrl = `${req.protocol}://${req.get(
+    "host"
+  )}/api/classify-number?number=<number>`;
+  res.status(404).json({
+    error: true,
+    message: `Route not found. Please use ${baseUrl}`,
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

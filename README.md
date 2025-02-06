@@ -86,7 +86,7 @@ GET /api/classify-number?number=<num>
 ## Deployment
 
 The API is deployed and publicly accessible at:
-[Live API Link]()
+[Live API Link](https://x-line-api-stage1.onrender.com/api/classify-number?number=371)
 
 ## Project Structure
 
